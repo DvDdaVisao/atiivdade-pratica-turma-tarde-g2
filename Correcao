@@ -1,0 +1,9 @@
+# Correções Realizadas - Projeto Java
+
+## 1. Classe Funcionario
+- Alterado atributo `nome` de `double` para `String`.
+- Corrigida a lógica do método `calcularBonus`.
+
+## 2. Classe Gerente
+- Adicionada a palavra-chave `extends`.
+- Criado construtor para repassar dados à classe pai via `super()`.
