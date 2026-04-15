@@ -1,0 +1,57 @@
+package org.senai.exemplos;
+
+public class Main {
+    public static void main(String[] args) {
+        Gerente g1 = new Gerente("Priscila", 5000.0, 1000.0);
+        g1.mostrarDados();
+        g1.mostrarBonus();
+
+        System.out.println("Total com bônus (10%): " + g1.calcularBonus(0.10));
+
+
+        Funcionario g2 = new Gerente("Keyla", 6000.0, 1500.0);
+        g2.mostrarDados();
+
+    }
+}
+
+package org.senai.exemplos;
+
+public class Gerente extends Funcionario {
+    private double bonusExtra;
+
+
+    public Gerente(String nome, double salario, double bonusExtra) {
+        super(nome, salario);
+        this.bonusExtra = bonusExtra;
+    }
+
+    @Override
+    public double calcularBonus(double percentual) {
+        return (salario * percentual) + bonusExtra;
+    }
+
+    public void mostrarBonus() {
+        System.out.println("Bônus extra: " + bonusExtra);
+    }
+}
+
+package org.senai.exemplos;
+
+public abstract class Funcionario {
+    protected String nome; // Corrigido para String
+    protected double salario;
+
+    public Funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    public double calcularBonus(double percentual) {
+        return salario * percentual;
+    }
+
+    public void mostrarDados() {
+        System.out.println("Nome: " + nome + " | Salário: R$ " + salario);
+    }
+}
