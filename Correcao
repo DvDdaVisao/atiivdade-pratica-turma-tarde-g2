@@ -7,3 +7,6 @@
 ## 2. Classe Gerente
 - Adicionada a palavra-chave `extends`.
 - Criado construtor para repassar dados à classe pai via `super()`.
+
+## 3. Classe Main
+- 
